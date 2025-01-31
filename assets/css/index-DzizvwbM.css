@@ -1,0 +1,48 @@
+@media (max-width: 1000px){.Chat{width:100dvw;flex-wrap:wrap;order:3;margin:80px auto 0;justify-content:flex-start}}
+@media screen and (max-width: 1000px){.ChatText{max-width:100dvw;min-width:100dvw;margin-right:0;border:none;border-radius:0}}
+@media screen and (max-width: 1000px){.ChatText__container-bg{width:100%;height:calc(100dvh - 240px);border-radius:0}}
+@media screen and (max-width: 1000px){.ChatText__container{width:100%;height:calc(100dvh - 240px)}}
+@media (max-width: 500px){.ChatText__enter{gap:8px;padding:0 12px 12px}}
+@media (max-width: 500px){.ChatText__input{font-size:18px;padding:12px}}
+@media (max-width: 500px){.ChatText__btn{padding:12px;font-size:18px}}
+@media (max-width: 1000px){.Social{flex-direction:row;width:100%;justify-content:start;right:0;height:90px;padding:0 12px 20px}}
+@media (max-width: 500px){.Social a{border-radius:10px;width:48px;height:48px}}
+@media (max-width: 500px){.Social__img{width:24px;height:24px}}
+@media (max-width: 1400px){.Decor{left:50vw}}
+@media (max-width: 1000px){.Decor{order:2;z-index:-1;justify-content:flex-end!important;left:0;align-items:baseline!important;top:-72px}}
+@media (max-width: 1000px){.Decor img{width:180px}}
+@media (max-width: 1000px){.Title{text-align:left;margin-top:0;padding:16px;font-size:48px;line-height:32px;height:70px;order:1}}
+@media (max-width: 1000px){.App{align-content:baseline;justify-content:flex-start}}
+@font-face{font-family:Upheaval;src:url(/fonts/UpheavalPro.ttf);font-weight:400;font-style:normal}
+@font-face{font-family:Clacon;src:url(/fonts/clacon2.ttf);font-weight:400;font-style:normal}
+.Background{width:100%!important;align-items:start!important;z-index:-1}
+.Background img{min-width:120vw;min-height:100vh}
+.Chat{display:flex;width:50%;min-width:900px;justify-content:center;align-items:center}
+.ChatText{max-width:90%;min-width:90%;background:#4d8b9fb3;border-radius:30px 0 30px 30px;border:2px solid #FF929A;position:relative}
+.ChatText__container-bg{position:absolute;width:100%;background-image:url(/img/chat/bg.gif);background-position:center;background-repeat:no-repeat;background-size:cover;z-index:1;height:calc(70vh - 24px);opacity:.5;border-radius:30px 0 30px 30px}
+.ChatText__container{position:relative;width:100%;height:100%;border-radius:30px 0 30px 30px;overflow:auto;display:flex;flex-direction:column;justify-content:space-between;z-index:2}
+.ChatText__enter{display:flex;justify-content:center;align-items:center;gap:14px;padding:0 16px 16px}
+.ChatText__input{all:unset;width:200%;padding:19px;background-color:#29485d;border-radius:10px;border:2px solid #FF929A;font-family:Clacon;font-size:22px}
+.ChatText__input::placeholder{color:#fffa}
+.ChatText__btn{all:unset;width:50%;padding:19px;background-color:#29485d;border-radius:10px;border:2px solid #FF929A;font-family:Clacon;font-size:22px;text-align:center;transition:color .2s,background-color .2s}
+.ChatText__btn:hover{cursor:pointer;color:#000;background-color:#fff}
+.ChatText__dialog{height:calc(70vh - 100px);overflow-y:scroll;scrollbar-color:#FF929A rgba(255,146,154,0);scrollbar-width:thin;padding-top:30px;display:flex;flex-wrap:wrap;row-gap:30px;align-items:center;align-content:baseline;padding-bottom:30px}
+.Dialog{display:flex;font-family:Clacon;padding-left:30px;font-size:22px;flex-direction:column;width:100%}
+.Social{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;width:60px;position:relative;right:60px}
+.Social a{transition:color .2s,background-color .2s;width:60px;height:60px;display:flex;justify-content:center;align-items:center;background-color:#29485d80;border:2px solid #FF929A;border-radius:10px 0 10px 10px}
+.Social a:hover{cursor:pointer;color:#000;background-color:#fff}
+.Social a:hover img{filter:invert(1)}
+.Social__img{width:34px;height:34px;transition:filter .2s}
+.Decor{width:100%!important;justify-content:center!important;align-items:flex-end!important;left:40vw;z-index:999}
+.Decor img{width:490px;pointer-events:none}
+.Title{text-transform:uppercase;font-family:Upheaval;font-size:110px;width:100%;text-align:center;margin-top:50px}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;box-sizing:border-box;color:#fff;font-family:Montserrat;letter-spacing:-.5px}
+.dnone{display:none}
+a{text-decoration:none}
+input,textarea{box-sizing:border-box}
+.free_img{width:0px;height:0px;display:flex;justify-content:center;align-items:center;position:relative}
+html{scroll-behavior:smooth;overflow-x:hidden}
+html{overflow:hidden}
+body{width:100vw;height:100vh}
+.App{display:flex;flex-wrap:wrap;min-height:100dvh;max-height:100dvh;align-items:center;align-content:space-between;justify-content:center;overflow:hidden}
