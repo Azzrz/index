@@ -1,0 +1,1345 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>$XOXO - Valentine's Meme Coin</title><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        :root {
+            --pink-primary: #ff1493;
+            --pink-secondary: #ff69b4;
+            --black: #000000;
+        }
+
+        body {
+            min-height: 100vh;
+            color: white;
+            background-color: var(--black);
+        }
+        /* About Section */
+.about-section {
+    background-color: #000;
+    padding: 80px 20px;
+    color: white;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-statement {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.quote {
+    font-size: 1.8rem;
+    color: var(--pink-primary);
+    font-style: italic;
+    margin: 40px 0;
+}
+
+.description, .vision, .community {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #888;
+}
+
+/* Community Section */
+.community-section {
+    background-color: #0a0a0a;
+    padding: 80px 20px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.social-card {
+    background: rgba(32, 32, 32, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 20, 147, 0.1);
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pink-primary);
+    box-shadow: 0 4px 20px rgba(255, 20, 147, 0.2);
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.social-card h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.social-card p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    padding: 60px 20px 20px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--pink-primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.token-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.token-info .price {
+    color: white;
+}
+
+.token-info .change.negative {
+    color: #ff4444;
+}
+
+.token-info .change.positive {
+    color: #22c55e;
+}
+
+.token-info .holders {
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 20px;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .token-info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Animation des cartes sociales */
+.social-card {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.social-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.social-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        .landing-section {
+            position: relative;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            object-position: center bottom;
+            opacity: 0.8;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pink-primary);
+        }
+
+        .buy-button {
+            margin-left: auto;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .static-text {
+            color: var(--pink-primary);
+            font-size: 4rem;
+            margin-right: 15px;
+        }
+
+        .typing-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typing-text {
+            color: white;
+            font-size: 4rem;
+            white-space: nowrap;
+        }
+
+        .typing-text::after {
+            content: '|';
+            position: absolute;
+            right: -8px;
+            color: var(--pink-primary);
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px var(--pink-primary);
+        }
+
+        .primary-button {
+            background: var(--pink-primary);
+            color: white;
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--pink-primary);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background-color: #0f0f0f;
+            padding: 80px 20px;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .stats-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .stats-header p {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(32, 32, 32, 0.7);
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-title {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-change {
+            font-size: 0.9rem;
+            color: #22c55e;
+        }
+
+        .stat-subtext {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-color: #000;
+            padding: 80px 20px;
+            display: none;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .gallery-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .gallery-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-slide {
+            min-width: 100%;
+            padding: 0 10px;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .gallery-slide.active {
+            transform: scale(1);
+        }
+
+        .gallery-slide:not(.active) {
+            transform: scale(0.8);
+            opacity: 0.7;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 20, 147, 0.7);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        nav.scrolled {
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-nav:hover {
+            background: rgba(255, 20, 147, 0.9);
+        }
+
+        .gallery-nav.prev {
+            left: 20px;
+        }
+
+        .gallery-nav.next {
+            right: 20px;
+        }
+
+        /* How to Buy Section */
+        .how-to-buy {
+            background-color: #1a1a1a;
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .section-header p {
+            color: #888;
+            font-size: 1.1rem;
+        }
+        nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink-primary);
+}
+
+.buy-button {
+    margin-left: auto;
+}
+
+/* Effet de scroll */
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu burger */
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.mobile-menu a:hover {
+    color: var(--pink-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .step-card {
+            background: rgba(40, 40, 40, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            background: var(--pink-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        
+        .step-icon {
+            margin: 20px 0;
+            color: var(--pink-primary);
+        }
+
+        .step-icon svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .step-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+
+        .step-card p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .buy-now-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .static-text, .typing-text {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .stats-grid, .steps-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+            .gallery-slide img {
+                height: 300px;
+            }
+        }
+         @media (max-width: 768px) {
+    /* Ajuster la promo section pour mobile */
+    .promo-section {
+        padding-top: 1200px; /* Décaler pour éviter que le GIF soit caché par le navbar */
+        text-align: center;
+    }
+
+    /* Centrer et agrandir le GIF */
+    .left-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Ajouter un espace entre le GIF et le texte */
+    }
+
+    .left-content img {
+        max-width: 90%; /* Agrandir le GIF */
+        height: auto;
+    }
+
+    /* Centrer et rétrécir les boutons */
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button {
+        width: auto;
+        min-width: 140px;
+        max-width: 200px;
+        padding: 10px 20px;
+    }
+}
+
+        @media (max-width: 768px) {
+    /* Ajuster la promo section pour mobile */
+    .promo-section {
+        padding-top: 1200px; /* Décaler pour éviter que le GIF soit caché par le navbar */
+        text-align: center;
+    }
+
+    /* Centrer et agrandir le GIF */
+    .left-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Ajouter un espace entre le GIF et le texte */
+    }
+
+    .left-content img {
+        max-width: 90%; /* Agrandir le GIF */
+        height: auto;
+    }
+
+    /* Centrer et rétrécir les boutons */
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button {
+        width: auto;
+        min-width: 140px;
+        max-width: 200px;
+        padding: 10px 20px;
+    }
+}
+
+    </style></head><body><div class="landing-section"><nav><div class="nav-container"><img src="assets/images/logo.png" alt="Logo" class="logo"><div class="nav-links"><a href="#promo">Promo</a><a href="#how">How to Buy</a><a href="#about">About</a><a href="#community">Community</a><a href="#stats">Live Statistics</a></div><a href="https://dexscreener.com/solana/7xn5q7s1qpt7dfsleeqaverpo3zvpw6sgnff3usncq6g" class="button primary-button buy-button">Buy Now</a><div class="menu-toggle" style="margin-left: 20px;" onclick="toggleMenu()">☰</div></div><div class="mobile-menu"><a href="https://dexscreener.com/solana/7xn5q7s1qpt7dfsleeqaverpo3zvpw6sgnff3usncq6g" class="button primary-button">Buy Now</a></div></nav><section class="promo-section"><div class="promo-container"><div class="left-content"><img src="assets/images/giphy.gif" alt="Valentine GIF"></div><div class="right-content"><div class="typing-container"><span class="static-text">$XOXO <br></span><span class="typing-text"></span></div><p class="subtext">Join  the next generation of community-driven tokens</p><div class="buttons"><a href="https://t.me/officalxoxo" class="button secondary-button">Join Community</a></div></div></div></section></div><section class="stats-section"><div class="stats-header"><h2>Live Statistics</h2><p>Real-time metrics from the Solana blockchain</p></div><div class="stats-grid"><div class="stat-card"><div class="stat-title">Current Price</div><div class="stat-value">$<span id="current-price">0.00</span></div><div class="stat-change"><span id="price-change">0.00</span>%</div><div class="stat-subtext">24h Change</div></div><div class="stat-card"><div class="stat-title">Market Cap</div><div class="stat-value">$<span id="market-cap">0.00</span></div><div class="stat-subtext">Fully Diluted</div></div><div class="stat-card"><div class="stat-title">Total Liquidity</div><div class="stat-value">$<span id="total-liquidity">0.00</span></div><div class="stat-subtext">Total Pool Value</div></div><div class="stat-card"><div class="stat-title">Trading Volume</div><div class="stat-value">$<span id="trading-volume">0.00</span></div><div class="stat-subtext">Last 24 Hours</div></div></div></section><section class="gallery-section"><div class="gallery-container"><button class="gallery-nav prev">&#10094;</button><div class="gallery-track"></div></div><button class="gallery-nav next">&#10095;</button></section><section class="how-to-buy" id="how"><div class="section-header"><h2>How to Buy $XOXO</h2><p>Follow these simple steps to join the XOXO community</p></div><div class="steps-grid"><div class="step-card"><div class="step-number">1</div><div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div><h3>Create Wallet</h3><p>Download Phantom or another Solana wallet</p></div><div class="step-card"><div class="step-number">2</div><div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div><h3>Get SOL</h3><p>Purchase SOL from any major exchange and transfer to your wallet</p></div><div class="step-card"><div class="step-number">3</div><div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12V5"></path><path d="m7 9 5-5 5 5"></path><path d="M12 12v7"></path><path d="m7 15 5 5 5-5"></path></svg></div><h3>Buy $XOXO</h3><p>Choose from our supported DEXs and CEXs to buy $XOXO</p></div><div class="step-card"><div class="step-number">4</div><div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg></div><h3>HODL Safely</h3><p>Store your $XOXO tokens securely in your wallet</p></div></div><div class="buy-now-container"></div></section><section class="about-section" id="about"><div class="section-header"><h2>About Our Mission</h2><p>Spreading love in the Web3 space</p></div><div class="about-content"><div class="about-text"><p class="mission-statement">
+                    $XOXO is a meme-inspired crypto asset built to create a fun, 
+                    community-driven global brand focused on celebrating love and connection in web3.
+                </p><p class="quote">"Share love, spread joy, create value"</p><p class="description">
+                    The token, $XOXO, follows a model that connects community engagement with exclusive content. 
+                    As our love community grows, so does the magic we create together.
+                </p><p class="vision">
+                    This approach aims to distinguish $XOXO within the meme coin space, providing a heartwarming 
+                    experience for users who appreciate love, humor, and the engaging nature of meme culture.
+                </p><p class="community">
+                    The $XOXO community welcomes everyone who shares our vision of spreading love and joy, 
+                    offering an interactive and enjoyable environment in the evolving world of crypto assets.
+                </p></div></div></section><section class="community-section" id="community"><div class="section-header"><h2>Join Our Community</h2><p>Connect with fellow $XOXO lovers and stay updated</p></div><div class="social-grid"><div class="social-card"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewbox="0 0 48 48"><path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"></path><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"></path><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"></path></svg><h3>Telegram</h3><p>Join our lovely Telegram community</p><a href="https://t.me/officalxoxo" class="button primary-button">Join Now</a></div><div class="social-card"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewbox="0 0 48 48"><path fill="#03a9f4" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path><path fill="#fff" d="M36,17.12c-0.882,0.391-1.999,0.758-3,0.88c1.018-0.604,2.633-1.862,3-3	c-0.951,0.559-2.671,1.156-3.793,1.372C29.789,13.808,24,14.755,24,20v2c-4,0-7.9-3.047-10.327-6c-2.254,3.807,1.858,6.689,2.327,7	c-0.807-0.025-2.335-0.641-3-1c0,0.016,0,0.036,0,0.057c0,2.367,1.661,3.974,3.912,4.422C16.501,26.592,16,27,14.072,27	c0.626,1.935,3.773,2.958,5.928,3c-2.617,2.029-7.126,2.079-8,1.977c8.989,5.289,22.669,0.513,21.982-12.477	C34.95,18.818,35.342,18.104,36,17.12"></path></svg><h3>Twitter</h3><p>Follow us for the latest love updates</p><a href="https://x.com/OFFICIALXOXOsol" class="button primary-button">Follow Us</a></div></div></section><footer class="footer"><div class="footer-content"><div class="footer-section"><img src="assets/images/logo.png" alt="$XOXO Logo" class="footer-logo"><p>The next generation of love-driven tokens on Solana</p></div><div class="footer-section"><h3>Quick Links</h3><ul><li></li><li></li><li></li><li></li><li></li></ul></div><div class="footer-section"><h3>Community</h3><ul><li><a href="https://t.me/officalxoxo">Telegram</a></li><li><a href="https://x.com/OFFICIALXOXOsol">Twitter</a></li></ul></div><div class="footer-section"><h3>Resources</h3><ul><li><a href="#">DexScreener</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2025 $XOXO. All rights reserved.</p><div class="token-info"><span>$XOXO</span><span class="price">$<span id="footer-price">0.000001</span></span><span class="change" id="footer-price-change">-2.5%</span></div></div></footer><script>
+        function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// Effet de scroll pour changer la couleur du navbar
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+        // Fonction pour formater les nombres avec K/M/B
+     // Fonction pour formater les nombres avec K/M/B
+function formatNumber(num) {
+    if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(2) + 'B';
+    }
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(2) + 'M';
+    }
+    if (num >= 1000) {
+        return (num / 1000).toFixed(2) + 'K';
+    }
+    return num.toFixed(2);
+}
+
+// Fonction pour mettre à jour les statistiques depuis Dexscreener
+async function updateStats() {
+    try {
+        const response = await fetch('https://api.dexscreener.com/latest/dex/tokens/FcsgEKX5cu2xeYQeQ5GiWKvPCEYmdBtPRTvYNFrLxoxo');
+        const data = await response.json();
+        
+        if (data.pairs && data.pairs[0]) {
+            const pair = data.pairs[0];
+            
+            // Mise à jour du prix
+            document.getElementById('current-price').textContent = 
+                parseFloat(pair.priceUsd).toFixed(8);
+            
+            // Mise à jour du changement de prix
+            const priceChange = pair.priceChange.h24;
+            const priceChangeElement = document.getElementById('price-change');
+            priceChangeElement.textContent = parseFloat(priceChange).toFixed(2);
+            // Change la couleur et ajoute un + si positif
+            if (priceChange >= 0) {
+                priceChangeElement.style.color = '#22c55e';
+                priceChangeElement.textContent = '+' + priceChangeElement.textContent;
+            } else {
+                priceChangeElement.style.color = '#ef4444';
+            }
+            
+            // Mise à jour du Market Cap
+            document.getElementById('market-cap').textContent = 
+                formatNumber(parseFloat(pair.fdv));
+            
+            // Mise à jour de la liquidité
+            document.getElementById('total-liquidity').textContent = 
+                formatNumber(parseFloat(pair.liquidity.usd));
+            
+            // Mise à jour du volume
+            document.getElementById('trading-volume').textContent = 
+                formatNumber(parseFloat(pair.volume.h24));
+
+            // Mise à jour des holders (si disponible)
+            const holders = pair.holders || 235;
+            document.querySelectorAll('.holders-count').forEach(el => {
+                el.textContent = holders.toLocaleString();
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching stats:', error);
+    }
+}
+
+// Gallery functionality
+const track = document.querySelector('.gallery-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.gallery-nav.next');
+const prevButton = document.querySelector('.gallery-nav.prev');
+let currentIndex = 0;
+
+function updateSlides() {
+    slides.forEach((slide, index) => {
+        if (index === currentIndex) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+    
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlides();
+});
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlides();
+});
+
+// Typing animation
+const phrases = [
+    "Love is in the Web3 air",
+    "Join the Valentine's revolution",
+    "Make memes, not war",
+    "Spreading love on the blockchain"
+];
+
+const typingText = document.querySelector('.typing-text');
+let phraseIndex = 0;
+let isDeleting = false;
+let charIndex = 0;
+const typingSpeed = 100;
+const deletingSpeed = 50;
+const pauseEnd = 1500; // Augmentation du délai entre les phrases
+
+function type() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+    }
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        setTimeout(() => {
+            isDeleting = true;
+        }, pauseEnd);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+    
+    const speed = isDeleting ? deletingSpeed : typingSpeed;
+    setTimeout(type, speed);
+}
+
+// Suppression du curseur statique, remplacement par un curseur animé
+const cursor = document.createElement('span');
+cursor.classList.add('cursor');
+cursor.textContent = '|';
+typingText.after(cursor);
+
+setTimeout(type, 1000);
+
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Initial calls
+updateStats();
+setInterval(updateStats, 30000);
+setTimeout(type, 1000);
+updateSlides();
+    </script><div class="token-info-popup"><span class="token-name">$XOXO</span><span class="token-price">$0.0178</span><span class="price-change">-5.85%</span><div class="divider"></div><div class="status-dot"></div></div><style>
+        .token-info-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(18, 18, 18, 0.95);
+            border-radius: 12px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .token-info-popup .token-name {
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .token-info-popup .token-price {
+            color: white;
+            font-size: 14px;
+        }
+        
+        .token-info-popup .price-change {
+            color: #ef4444;
+            font-size: 14px;
+        }
+        
+        .token-info-popup .holders {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .token-info-popup .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+        }
+        
+        .token-info-popup .divider {
+            width: 1px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        </style><style>
+.promo-section {
+    background-color: var(--black);
+    padding-top: 10%;
+}
+
+.promo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Réduction de la largeur max */
+    margin: 0 auto;
+}
+
+.left-content {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+}
+
+.left-content img {
+    max-width: 70%;
+    height: auto;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.right-content {
+    flex: 1;
+    text-align: left;
+    max-width: 70%; 
+    /* Largeur max fixe pour éviter les variations */
+}
+
+.typing-container {
+    display: inline-block;
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--pink-primary);
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.typing-text {
+    display: inline-block;
+    color: white;
+    font-size:2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cursor {
+    display: inline;
+    color: var(--pink-primary);
+    font-size: 3rem;
+    animation: blink 0.8s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .typing-container {
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+}
+
+.subtext {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.primary-button {
+    background: var(--pink-primary);
+    color: white;
+}
+
+.secondary-button {
+    background: transparent;
+    color: white;
+    border: 2px solid var(--pink-primary);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--pink-primary);
+}
+@media (max-width: 1200px) {
+    .promo-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10%;
+        font-size: 0.7em;
+    }
+    .landing-section{
+        padding-bottom: 700px;
+    }
+
+    .left-content {
+        order: 1;
+        padding-right: 0;
+        margin-bottom: 20px;
+        width: 30%;
+    }
+
+    .right-content {
+        order: 2;
+        padding: 15px;
+        max-width: 100%;
+        margin-top: -15%;
+    }
+
+    .left-content img {
+        max-width: 10px;
+    }
+    .typing-text {
+        font-size: 0.7em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    a { 
+        text-align: center;
+
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .promo-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10%;
+        font-size: 1em;
+    }
+
+    .left-content {
+        order: 1;
+        padding-right: 0;
+        margin-bottom: 20px;
+        width: 30%;
+    }
+
+    .right-content {
+        order: 2;
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .left-content img {
+        max-width: 250%;
+    }
+
+    .typing-container {
+        font-size: 2.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    a { 
+        text-align: center;
+
+    }
+}
+
+          </style><script>
+       // Fonction pour mettre à jour les données du token (popup et live stats)
+async function updateAllTokenData() {
+    try {
+        const response = await fetch('https://api.dexscreener.com/latest/dex/tokens/FcsgEKX5cu2xeYQeQ5GiWKvPCEYmdBtPRTvYNFrLxoxo');
+        const data = await response.json();
+        
+        if (data.pairs && data.pairs[0]) {
+            const pair = data.pairs[0];
+            
+            // Mise à jour des Live Stats
+            document.getElementById('current-price').textContent = parseFloat(pair.priceUsd).toFixed(8);
+            
+            const priceChange = pair.priceChange.h24;
+            const priceChangeElement = document.getElementById('price-change');
+            priceChangeElement.textContent = parseFloat(priceChange).toFixed(2);
+            
+            if (priceChange >= 0) {
+                priceChangeElement.style.color = '#22c55e';
+                priceChangeElement.textContent = '+' + priceChangeElement.textContent;
+            } else {
+                priceChangeElement.style.color = '#ef4444';
+            }
+            
+            document.getElementById('market-cap').textContent = formatNumber(parseFloat(pair.fdv));
+            document.getElementById('total-liquidity').textContent = formatNumber(parseFloat(pair.liquidity.usd));
+            document.getElementById('trading-volume').textContent = formatNumber(parseFloat(pair.volume.h24));
+
+            // Mise à jour de la popup
+            document.querySelector('.token-price').textContent = '$' + parseFloat(pair.priceUsd).toFixed(8);
+            
+            const popupPriceChange = document.querySelector('.price-change');
+            popupPriceChange.textContent = `${priceChange >= 0 ? '+' : ''}${parseFloat(priceChange).toFixed(2)}%`;
+            popupPriceChange.style.color = priceChange >= 0 ? '#22c55e' : '#ef4444';
+
+            // Mise à jour des holders partout
+            const holders = pair.holders;
+            document.querySelectorAll('.holders-count').forEach(el => {
+                el.textContent = holders.toLocaleString();
+            });
+            document.querySelector('.token-info-popup .holders').textContent = `${holders.toLocaleString()} holders`;
+        }
+    } catch (error) {
+        console.error('Error updating token data:', error);
+    }
+}
+
+// Supprimer les anciennes fonctions updateStats et updateTokenInfo
+// Remplacer par la nouvelle fonction unifiée
+updateAllTokenData();
+setInterval(updateAllTokenData, 30000);
+        </script><script>
+            async function updateFooterPrice() {
+                try {
+                    const response = await fetch('https://api.dexscreener.com/latest/dex/tokens/FcsgEKX5cu2xeYQeQ5GiWKvPCEYmdBtPRTvYNFrLxoxo');
+                    const data = await response.json();
+            
+                    if (data.pairs && data.pairs[0]) {
+                        const pair = data.pairs[0];
+                        
+                        // Mise à jour du prix
+                        document.getElementById('footer-price').textContent = parseFloat(pair.priceUsd).toFixed(8);
+                        
+                        // Mise à jour du changement de prix
+                        const priceChange = parseFloat(pair.priceChange.h24).toFixed(2);
+                        const priceChangeElement = document.getElementById('footer-price-change');
+                        priceChangeElement.textContent = (priceChange >= 0 ? '+' : '') + priceChange + '%';
+            
+                        if (priceChange >= 0) {
+                            priceChangeElement.style.color = '#22c55e'; // Vert si positif
+                        } else {
+                            priceChangeElement.style.color = '#ef4444'; // Rouge si négatif
+                        }
+            
+                        // Mise à jour du nombre de holders
+                        document.getElementById('footer-holders').textContent = pair.holders ? pair.holders.toLocaleString() : "12,345";
+                    }
+                } catch (error) {
+                    console.error('Error updating footer price:', error);
+                }
+            }
+            
+            // Met à jour toutes les 30 secondes
+            updateFooterPrice();
+            setInterval(updateFooterPrice, 30000);
+            </script></body></html>
